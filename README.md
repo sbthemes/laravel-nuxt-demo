@@ -1,2 +1,2 @@
 # laravel-nuxt-demo
-Demo with laravel and nuxt with cookie stratagy authentication
+Laravel + nuxt with cookie stratagy authentication
