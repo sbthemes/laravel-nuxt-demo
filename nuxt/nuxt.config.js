@@ -23,7 +23,12 @@ export default {
     components: true,
 
     buildModules: [
+        '@nuxtjs/tailwindcss'
     ],
+
+    tailwindcss: {
+        jit: true
+    },
 
     modules: [
         '@nuxtjs/axios',
@@ -40,6 +45,11 @@ export default {
 
     auth: {
         localStorage: false,
+        cookie: {
+            options: {
+                maxAge: 31536000, // 1 year
+            }
+        },
         redirect: {
             login: '/login',
             logout: '/login',

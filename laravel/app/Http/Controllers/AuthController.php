@@ -13,12 +13,18 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $data = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-        if (! auth()->attempt($credentials))
+        $remember = ! empty($request->remember) ? true : false;
+
+        if (! auth()->attempt($data, $remember)) {
             throw ValidationException::withMessages([
                 'email' =>  'Invalid credentials.'
             ]);
+        }
 
         $request->session()->regenerate();
         return response()->noContent();

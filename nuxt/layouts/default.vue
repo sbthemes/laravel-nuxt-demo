@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <Nuxt />
+    <div class="antialiased">
+        <div class="max-w-md mx-auto">
+            <Nuxt />
+        </div>
     </div>
 </template>
 
