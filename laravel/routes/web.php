@@ -1,0 +1,27 @@
+<?php
+
+use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::post('web/csrf', function() { return response()->noContent(); });
+Route::post('web/auth/login', [AuthController::class, 'login']);
+
+Route::post('web/feedback', [AuthController::class, 'feedback']);
+
+Route::prefix('web')->middleware('web')->group(function() {
+
+    Route::get('auth/user', [AuthController::class, 'user']);
+    Route::post('auth/logout', [AuthController::class, 'logout']);
+
+});
