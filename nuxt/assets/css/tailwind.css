@@ -7,3 +7,28 @@
         outline: none !important;
     }
 }
+
+.toasted-container .toasted {
+    display: block !important;
+    min-height: 0 !important;
+    padding: 8px 20px 10px !important;
+    line-height: 1.5 !important;
+    text-align: center;
+}
+@screen sm {
+    .toasted-container .toasted {
+        border-radius: 0.25rem !important;
+    }
+}
+.toasted-container.top-center {
+    top: 0 !important;
+}
+.toasted-container a[href] {
+    @apply font-bold underline hover:no-underline;
+}
+.toasted .primary.error, .toasted.toasted-primary.error {
+    background-color: #b81c23 !important;
+}
+.toasted .primary.success, .toasted.toasted-primary.success {
+    background-color: #8fae1b !important;
+}

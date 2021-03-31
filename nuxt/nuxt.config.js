@@ -18,6 +18,9 @@ export default {
     ],
 
     plugins: [
+        {
+            src: '~/plugins/axios.js',
+        },
     ],
 
     components: true,
@@ -32,7 +35,8 @@ export default {
 
     modules: [
         '@nuxtjs/axios',
-        '@nuxtjs/auth-next'
+        '@nuxtjs/auth-next',
+        '@nuxtjs/toast',
     ],
 
     axios: {
@@ -68,6 +72,12 @@ export default {
                 }
             },
         }
+    },
+
+    toast: {
+        position: 'top-center',
+        duration: 5000,
+        singleton: true
     },
 
     build: {

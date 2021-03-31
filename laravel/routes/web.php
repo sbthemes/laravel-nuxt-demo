@@ -14,10 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('web/csrf', function() { return response()->noContent(); });
+Route::post('web/csrf', [AuthController::class, 'csrf']);
 Route::post('web/auth/login', [AuthController::class, 'login']);
-
-Route::post('web/feedback', [AuthController::class, 'feedback']);
 
 Route::prefix('web')->middleware('web')->group(function() {
 

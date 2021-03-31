@@ -7,9 +7,9 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    public function feedback(Request $request)
+    public function csrf(Request $request)
     {
-        return response()->json($request->all());
+        return response()->noContent();
     }
     public function login(Request $request)
     {
