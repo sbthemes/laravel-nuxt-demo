@@ -9,6 +9,14 @@
                 <field-input type="password" v-model="args.password" />
             </div>
             <div>
+                <select type="password">
+                    <option>Select...</option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <div>
                 <label class="flex items-center">
                     <input type="checkbox" v-model="args.remember">
                     <span class="ml-2">Remember me</span>

@@ -2,7 +2,7 @@
     <button
         :disabled="loading"
         :class="[ ! loading ? 'hover:bg-gray-800 active:bg-gray-900' : 'cursor-default' ]"
-        class="text-white bg-gray-700 border py-2 px-3 rounded uppercase font-medium relative"
+        class="btn"
     >
         <span :class="[ loading ? 'invisible' : '' ]"><slot></slot></span>
         <span :class="[ ! loading ? 'hidden' : '' ]" class="absolute inset-0 flex items-center justify-center">

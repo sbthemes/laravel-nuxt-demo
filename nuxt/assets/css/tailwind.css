@@ -6,6 +6,32 @@
     * {
         outline: none !important;
     }
+
+    [type=text],
+    [type=email],
+    [type=url],
+    [type=password],
+    [type=number],
+    [type=date],
+    [type=datetime-local],
+    [type=month],
+    [type=search],
+    [type=tel],
+    [type=time],
+    [type=week],
+    [multiple],
+    textarea,
+    select {
+        @apply border hover:border-gray-900 focus:border-gray-900 w-full rounded hover:ring-0 focus:ring-0;
+    }
+
+    [type=checkbox] {
+        @apply rounded focus:ring-0;
+    }
+
+    .btn {
+        @apply text-white bg-gray-700 border py-2 px-3 rounded uppercase font-medium relative;
+    }
 }
 
 .toasted-container .toasted {
