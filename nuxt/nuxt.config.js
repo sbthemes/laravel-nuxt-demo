@@ -40,7 +40,7 @@ export default {
     ],
 
     axios: {
-        baseURL: 'http://laravel.devv/web',
+        baseURL: process.env.API_URL,
         credentials: true,
         headers: {
             'X-Requested-With' : 'XMLHttpRequest',

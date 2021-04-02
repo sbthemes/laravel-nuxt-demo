@@ -24,7 +24,6 @@
             </div>
             <field-button :loading="loading" type="submit" class="w-full">Login</field-button>
         </form>
-        <feedback />
     </div>
 </template>
 
